@@ -8,10 +8,10 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace ConfTech.Controllers {
-    public class HomeController : Controller {
-        private readonly ILogger<HomeController> _logger;
+    public class ConfTechController : Controller {
+        private readonly ILogger<ConfTechController> _logger;
 
-        public HomeController(ILogger<HomeController> logger) {
+        public ConfTechController(ILogger<ConfTechController> logger) {
             _logger = logger;
         }
 
