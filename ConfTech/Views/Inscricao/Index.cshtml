@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Realize sua inscrição:";
+}
+
+
+<section id="secao-form-inscricao">
+    <h2>Realize sua inscrição:</h2>
+    <form asp-action="Create" method="post" id="form-inscricao">
+        <label for="nome-form">Nome:</label>
+        <input type="text" name="nome" id="nome-form" required>
+        <label for="email-form">Email:</label>
+        <input type="email" name="email" id="email-form" required>
+        <label for="profissao-form">Profissão:</label>
+        <input type="text" name="profissao" id="profissao-form">
+        <label for="select-form">Experiência:</label>
+        <select name="experiencia" id="select-form">
+            <option value="Não preenchido">Selecione uma opção</option>
+            <option value="Não tenho nenhuma experiência com programação">Não tenho nenhuma experiência com programação</option>
+            <option value="Já tive alguma experiência / contato com programação">Já tive alguma experiência / contato com programação</option>
+            <option value="Possuo uma experiência média em programação">Possuo uma experiência média em programação</option>
+            <option value="Sou muito experiente em programação">Sou muito experiente em programação</option>
+        </select>
+        <div id="div-checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox-form" checked>
+            <label for="checkbox-form">Desejo receber novidades por email</label>
+        </div>
+        <input asp-controller="Inscricao" asp-action="Create" type="submit" value="REALIZAR INSCRIÇÃO" id="submit-form">
+    </form>
+</section>
